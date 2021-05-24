@@ -3,6 +3,7 @@ import DrumPad from './DrumPad'
 import drumData from '../drumData'
 import Display from './Display'
 
+// container for drum-pad-box (containing all individual drum pads) and display (containining kit selector, current drum and volume slider)
 class DrumMachine extends Component {
   constructor() {
     super()
@@ -25,6 +26,7 @@ class DrumMachine extends Component {
     document.removeEventListener("keydown", this.handleKeyPress)
   }
 
+  // drum pads can be activated by click or by keypress
   handleKeyPress(e) {
     let drumKeys = drumData.filter(drum => drum.kit === this.state.kit).map(drum => drum.label)
     let key = e.key.toUpperCase()
@@ -32,7 +34,7 @@ class DrumMachine extends Component {
     if(drumKeys.includes(key)) {
       e.preventDefault()
       this.setState({curDrum: audio.parentNode.id})
-      audio.parentNode.className="drum-pad-active";
+      audio.parentNode.className="drum-pad-active";             //css class for when button is active (imitates button: active class)
       setTimeout(()=>audio.parentNode.className="drum-pad",100)
       audio.parentNode.click()
     }
@@ -41,7 +43,7 @@ class DrumMachine extends Component {
   handlePadClick(e) {
     this.setState({curDrum: e.currentTarget.id})
     let audio = document.getElementById(e.currentTarget.value)
-    audio.load()
+    audio.load()                                                // enables mulitiple clicks in quick succession
     audio.volume=this.state.volume/10
     audio.play()
   }

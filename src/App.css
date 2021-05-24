@@ -12,6 +12,7 @@ button {
   box-shadow: 4px 4px 7px 0px #26261B;
 }
 button:active {
+/* add depress effect*/
   background-color: #00b300;
   box-shadow: 1px 1px 1px 0px #26261B;
   transform: translateY(3px);
@@ -33,6 +34,7 @@ button:focus {
   line-height:50%;
 }
 
+/* default moble first - display is below drumpad */
 #drum-machine {
   display: flex;
   flex-wrap: nowrap;
@@ -63,6 +65,7 @@ button:focus {
   background-color: #FFFFFF
 }
 .drum-pad-active {
+    /* add depress effect - imitates button: active*/
   width: 90%;
   height: 90%;
   font-size: 8vmin;
@@ -138,6 +141,7 @@ button:focus {
 
 @media only screen and (min-width: 768px) {
 
+/* on larger screen display next to drum pads */
   #drum-machine {
     flex-direction: row;
   }

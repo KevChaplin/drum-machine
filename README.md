@@ -5,8 +5,8 @@ freeCodeCamp.org
 
 ## Build Notes
 
-Built using "Create React App".
-HTML, CSS, React (using traditional class component to control state)
+Built using "Create React App".  
+HTML, CSS, React (using traditional class component to control state)  
 Drum sounds from "https://s3.amazonaws.com/freecodecamp/drums"
 
 ## Known Issues

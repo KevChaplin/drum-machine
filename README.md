@@ -3,7 +3,17 @@
 Created as project 3 of the "Front End Development Libraries Projects" of the "FreeCodeCamp" syllabus.
 freeCodeCamp.org
 
-Project 3 - Build a Drum Machine
+## Build Notes
+
+Built using "Create React App".
+HTML, CSS, React (using traditional class component to control state)
+Drum sounds from "https://s3.amazonaws.com/freecodecamp/drums"
+
+## Known Issues
+
+None
+
+## Project 3 - Build a Drum Machine
 
 Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/MJyNMd.
 
